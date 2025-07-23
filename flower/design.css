@@ -29,11 +29,11 @@ body {
   width: 30px;
 }
 
-.brand {
+/* .brand {
   font-size: 1.4rem;
   font-weight: bold;
   color: #d94e2d;
-}
+} */
 
 .nav-links {
   display: flex;

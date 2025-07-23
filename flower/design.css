@@ -93,7 +93,7 @@ body {
 
 .banner-image {
   flex: 1;
-  text-align: right;
+  text-align: left;
 }
 
 .banner-image img {
@@ -166,16 +166,67 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Navbar responsive */
+  .nav-links a {
+    display: none; /* hide menu links */
+  }
+
+  .cart {
+    margin-left: auto;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+  /* Banner responsive */
   .banner {
-    flex-direction: column;
-    text-align: left;
+     flex-direction: column-reverse;
+    text-align:left;
+    padding: 30px 20px;
   }
 
   .banner-image {
-    text-align: center;
+    text-align: top;
+  }
+
+  .banner-image img {
+    max-width: 100%;
   }
 
   .banner-content h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .banner-content p {
+    font-size: 0.95rem;
+  }
+
+  /* Product Section Responsive */
+  .product-section {
+    padding: 40px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .product-card {
+    padding: 8px;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.85rem;
+  }
+
+  .product-card button {
+    font-size: 0.9rem;
+    padding: 6px;
   }
 }
+

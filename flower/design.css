@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
   background-color: #f6f9ff;
   color: #333;
 }
@@ -28,26 +28,19 @@ body {
 .logo img {
   width: 30px;
 }
-
-/* .brand {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #d94e2d;
-} */
-
-.nav-links {
+.nav-flower {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-.nav-links a {
+.nav-flower a {
   text-decoration: none;
   color: #444;
   font-size: 0.95rem;
 }
 
-.nav-links a.active {
+.nav-flower a.active {
   font-weight: bold;
 }
 
@@ -81,12 +74,12 @@ body {
 }
 
 .orange {
-  color: #ef5b1d;
+  color: #bf6037;
   font-weight: 700;
 }
 
 .banner-content p {
-  color: #555;
+  color: #514b4b;
   font-size: 1rem;
   max-width: 500px;
 }
@@ -102,25 +95,25 @@ body {
   height: auto;
 }
 
-/* Product Section */
-.product-section {
+/* 3. Plants Section */
+.Plants-Section {
   padding: 50px 30px;
   text-align: center;
 }
 
-.product-section h2 {
+.Plants-Section h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
-.product-section .subtitle {
+.Plants-Section.subtitle {
   max-width: 600px;
   margin: 0 auto 40px;
   font-size: 0.95rem;
   color: #666;
 }
 
-.product-grid {
+.Plants-Section-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 25px;
@@ -150,8 +143,8 @@ body {
 }
 
 .product-card button {
-  background-color: #ef5b1d;
-  color: #fff;
+  background-color: #c04c1b;
+  color: #faf6f6;
   border: none;
   padding: 8px;
   width: 100%;
@@ -164,11 +157,10 @@ body {
   background-color: #d94e2d;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  /* Navbar responsive */
-  .nav-links a {
-    display: none; /* hide menu links */
+/* Responsive */ /* Navbar responsive */
+@media (max-width: 768px)
+ { .nav-links a {
+    display: none; 
   }
 
   .cart {
@@ -202,7 +194,7 @@ body {
     font-size: 0.95rem;
   }
 
-  /* Product Section Responsive */
+  /* Plants-Section Responsive */
   .product-section {
     padding: 40px 20px;
   }
@@ -230,3 +222,294 @@ body {
   }
 }
 
+
+ /* Plants Lover Section */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 4. Plants Lover Section */
+.Lover {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  align-items: flex-start;
+  padding: 20px;
+  background: #fff;
+}
+
+.Lover-image {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  flex: 1 1 100%;
+  padding-top: 60px;
+}
+
+.Lover-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.badge {
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  z-index: 10;
+}
+
+
+.Lover-content {
+  flex: 1 1 100%;
+  padding: 20px;
+}
+
+.Lover-content ul {
+  padding-left: 20px;
+}
+
+.Lover-content li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Deals Section */
+.deals {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fafafa;
+}
+
+.deals .highlight {
+  color: orange;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card.large {
+  grid-row: span 2;
+  height: 100%;
+  min-height: 360px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.card-overlay button {
+  margin-top: 5px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .hero {
+    flex-wrap: nowrap;
+  }
+
+  .hero-image {
+    flex: 1 1 50%;
+  }
+
+  .hero-content {
+    flex: 1 1 50%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 180px);
+  }
+
+  .card.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .badge {
+    display: none;
+  }
+}
+
+/* 5. Join Section*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* 5. Join Section= */
+.newsletter {
+  background: url('assets/news-letter-bg.png') no-repeat center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.newsletter h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+}
+
+.newsletter button {
+  background-color:orangered;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* =Footer Section = */
+.footer {
+  background: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-left {
+  flex: 1 1 250px;
+}
+
+.footer-left .logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #746f6f;
+}
+
+.footer-links {
+  flex: 2 1 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+}
+
+.footer-links a {
+  flex: 1 1 120px;
+  text-decoration: none;
+  color: #646060;
+  font-size: 14px;
+}
+
+.footer-social {
+  flex: 1 1 150px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social img {
+  width: 24px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .newsletter h2 {
+    font-size: 22px;
+  }
+  .newsletter form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+ max-width: 300px;
+  }
+  .footer {
+    flex-direction: column;
+   text-align: center;
+    align-items: center;
+  }
+  .footer-left,
+  .footer-links,
+  .footer-social {
+    width: 100%;
+  max-width: 320px;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links a {
+    flex: unset;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+}
